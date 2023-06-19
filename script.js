@@ -46,6 +46,7 @@ function filterColors() {
         })
     }
 
+
 function filterForms() {
     $('.filters__shape').delegate('li','click', function() {
         $(this).toggleClass('active');
@@ -61,8 +62,7 @@ function filterForms() {
     }
 
 
-function clearFilter(data) {
-    
+function clearFilter() {
     endFilter.on('click', function() {
         $('.elements__item').each(function(index, elem) {
             $(this).removeClass('active');
@@ -75,14 +75,6 @@ function clearFilter(data) {
     })
 }
 
-function remove() {
-    $('.elements__item').each(function(index, elem) {
-        $(this).removeClass('active');
-    })  
-    $('.filters__color, li').each(function(index, elem) {
-        $(this).removeClass('active');
-    })  
-}
 
 
 
@@ -127,136 +119,4 @@ function remove() {
 
 
 
-
-// filterColors();
-
-
-// const startFilter = $('.add');
-// const endFilter = $('.clear')
-// clearFilter();
-
-// function filterColors() {
-//     $('.filters__shape').delegate('li','click', function() {
-//         $(this).toggleClass('active');
-//     })
-    
-//     $('.filters__color').delegate('li:first-child', 'click', function() {
-//         $(this).toggleClass('active');
-//         if ("li:first-child:contains('active')") {
-//             startFilter.on('click', function() {
-//                 $('.elements__item').filter('[data-color="red"]').addClass('active');
-//             });
-//         }
-//     });
-
-//     $('.filters__color').delegate('li:nth-child(2)', 'click', function() {
-//         $(this).toggleClass('active');
-//         startFilter.on('click', function() {
-//             $('.elements__item').filter('[data-color="yellow"]').addClass('active');
-//         });
-//     });
-
-//     $('.filters__color').delegate('li:last-child', 'click', function() {
-//         $(this).toggleClass('active');
-//         startFilter.on('click', function() {
-//             $('.elements__item').filter('[data-color="green"]').addClass('active');
-//         });
-//     });
-// }
-
-// function clearFilter() {
-//     endFilter.on('click', function() {
-//         $('.elements__item').removeClass('active');
-//         $('.filters__color, li').removeClass('active');
-//     })
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- // let arrColor = [];
-        // $('.active').each(function() {
-        //     arrColor.push($(this).data('color'));
-        // });
-        // colors = [...arrColor];
-        // console.log(colors, arrColor);
-
-
-
-// function filterForms() {
-//     $('.filters__shape').delegate('li','click', function() {
-//         $(this).toggleClass('active');
-//         let arrFigures = [];
-//         let newArr = [];
-//         $('.active').each(function() {
-//             arrFigures.push($(this).data('shape'));
-//         });
-//         figures = [...arrFigures];
-//         // console.log(figures, arrFigures);
-//         figures.forEach(elem => {
-//             if (arrFigures['square'] === figures['square']) {
-//                 newArr = [...arrFigures, figures[elem]]
-//             }
-//             console.log(newArr);
-//         })
-//     })
-// }
-
-
-
-// filterColors();
-// filterBut();
-// filterForms();
-
-// function filterBut() {
-//     $('.add').on('click', function() {
-//         console.log('but');
-//     })
-// }
-
-
-// t = [];
-// figures.forEach(elem => {
-//     if (arrFigures['square'] ===b['square']) {
-//         t = [...t, b[i]]
-//     }
-// })
 
